@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.manoelcampos</groupId>
+    <groupId>Atividade</groupId>
     <artifactId>sistema-bancario</artifactId>
     <version>1.0.0</version>
     <properties>
@@ -36,16 +36,22 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.6</version>
+                <version>0.8.5</version>
                 <executions>
                     <execution>
+                        <id>jacoco-initialize</id>
                         <goals>
                             <goal>prepare-agent</goal>
-                            <goal>report</goal>
                         </goals>
                     </execution>
-                </executions>
-            </plugin>
+                <executions>
+                <id>jacoco-report</id>
+                <goals>
+                    <goal>report</goal>
+                <goals>
+                </execution>
+               </executions>
+           </plugin>
         </plugins>
     </build>    
 
